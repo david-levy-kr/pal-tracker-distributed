@@ -10,7 +10,6 @@ import javax.sql.DataSource;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import static io.pivotal.pal.tracker.backlog.data.StoryRecord.storyRecordBuilder;
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
 @Repository
@@ -53,7 +52,7 @@ public class StoryDataGateway {
     }
 
     private RowMapper<StoryRecord> rowMapper
-        = (rs, num) -> storyRecordBuilder()
+        = (rs, num) -> StoryRecord.storyRecordBuilder()
         .id(rs.getLong("id"))
         .projectId(rs.getLong("project_id"))
         .name(rs.getString("name"))

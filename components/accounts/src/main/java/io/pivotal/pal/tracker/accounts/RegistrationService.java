@@ -16,7 +16,6 @@ public class RegistrationService {
         this.userDataGateway = userDataGateway;
         this.accountDataGateway = accountDataGateway;
     }
-
     @Transactional
     public UserRecord createUserWithAccount(String name) {
         UserRecord user = userDataGateway.create(name);

@@ -10,7 +10,6 @@ import javax.sql.DataSource;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import static io.pivotal.pal.tracker.accounts.data.AccountRecord.accountRecordBuilder;
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
 @Repository
@@ -46,7 +45,7 @@ public class AccountDataGateway {
         );
     }
 
-    private RowMapper<AccountRecord> rowMapper = (rs, num) -> accountRecordBuilder()
+    private RowMapper<AccountRecord> rowMapper = (rs, num) -> AccountRecord.accountRecordBuilder()
         .id(rs.getLong("id"))
         .ownerId(rs.getLong("owner_id"))
         .name(rs.getString("name"))

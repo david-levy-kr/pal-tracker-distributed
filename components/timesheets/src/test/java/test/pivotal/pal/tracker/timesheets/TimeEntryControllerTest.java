@@ -1,5 +1,6 @@
 package test.pivotal.pal.tracker.timesheets;
 
+import io.pivotal.pal.tracker.eurekaserver.timesheets.*;
 import io.pivotal.pal.tracker.timesheets.*;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryDataGateway;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryFields;

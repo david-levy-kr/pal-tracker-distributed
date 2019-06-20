@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-import static io.pivotal.pal.tracker.allocations.AllocationInfo.allocationInfoBuilder;
-import static io.pivotal.pal.tracker.allocations.data.AllocationFields.allocationFieldsBuilder;
 import static java.util.stream.Collectors.toList;
 
 @RestController
@@ -54,7 +52,7 @@ public class AllocationController {
     }
 
     private AllocationFields formToFields(AllocationForm form) {
-        return allocationFieldsBuilder()
+        return AllocationFields.allocationFieldsBuilder()
             .projectId(form.projectId)
             .userId(form.userId)
             .firstDay(LocalDate.parse(form.firstDay))
@@ -63,7 +61,7 @@ public class AllocationController {
     }
 
     private AllocationInfo present(AllocationRecord record) {
-        return allocationInfoBuilder()
+        return AllocationInfo.allocationInfoBuilder()
             .id(record.id)
             .projectId(record.projectId)
             .userId(record.userId)

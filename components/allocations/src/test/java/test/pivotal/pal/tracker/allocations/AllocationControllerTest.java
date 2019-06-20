@@ -1,6 +1,7 @@
 package test.pivotal.pal.tracker.allocations;
 
 import io.pivotal.pal.tracker.allocations.*;
+import io.pivotal.pal.tracker.eurekaserver.allocations.*;
 import io.pivotal.pal.tracker.allocations.data.AllocationDataGateway;
 import io.pivotal.pal.tracker.allocations.data.AllocationRecord;
 import org.junit.Test;

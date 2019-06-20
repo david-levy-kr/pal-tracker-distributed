@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import static io.pivotal.pal.tracker.accounts.AccountInfo.accountInfoBuilder;
 import static java.util.stream.Collectors.toList;
 
 @RestController
@@ -29,7 +28,7 @@ public class AccountController {
     }
 
     private AccountInfo present(AccountRecord record) {
-        return accountInfoBuilder()
+        return AccountInfo.accountInfoBuilder()
             .id(record.id)
             .ownerId(record.ownerId)
             .name(record.name)

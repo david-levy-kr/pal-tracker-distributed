@@ -1,6 +1,7 @@
 package test.pivotal.pal.tracker.backlog;
 
 import io.pivotal.pal.tracker.backlog.*;
+import io.pivotal.pal.tracker.eurekaserver.backlog.*;
 import io.pivotal.pal.tracker.backlog.data.StoryDataGateway;
 import io.pivotal.pal.tracker.backlog.data.StoryRecord;
 import org.junit.Test;

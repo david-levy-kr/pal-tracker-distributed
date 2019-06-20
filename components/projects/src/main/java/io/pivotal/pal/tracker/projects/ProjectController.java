@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static io.pivotal.pal.tracker.projects.ProjectInfo.projectInfoBuilder;
-import static io.pivotal.pal.tracker.projects.data.ProjectFields.projectFieldsBuilder;
 import static java.util.stream.Collectors.toList;
 
 @RestController
@@ -50,7 +49,7 @@ public class ProjectController {
 
 
     private ProjectFields formToFields(ProjectForm form) {
-        return projectFieldsBuilder()
+        return ProjectFields.projectFieldsBuilder()
             .accountId(form.accountId)
             .name(form.name)
             .active(form.active)

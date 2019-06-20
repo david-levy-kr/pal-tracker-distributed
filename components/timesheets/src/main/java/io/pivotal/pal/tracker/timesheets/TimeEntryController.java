@@ -1,8 +1,8 @@
 package io.pivotal.pal.tracker.timesheets;
 
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryDataGateway;
-import io.pivotal.pal.tracker.timesheets.data.TimeEntryFields;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryRecord;
+import io.pivotal.pal.tracker.timesheets.data.TimeEntryFields;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-import static io.pivotal.pal.tracker.timesheets.TimeEntryInfo.timeEntryInfoBuilder;
 import static io.pivotal.pal.tracker.timesheets.data.TimeEntryFields.timeEntryFieldsBuilder;
 import static java.util.stream.Collectors.toList;
 
@@ -45,7 +44,7 @@ public class TimeEntryController {
 
 
     private TimeEntryInfo present(TimeEntryRecord record) {
-        return timeEntryInfoBuilder()
+        return TimeEntryInfo.timeEntryInfoBuilder()
             .id(record.id)
             .projectId(record.projectId)
             .userId(record.userId)
